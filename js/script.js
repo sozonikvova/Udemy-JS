@@ -22,7 +22,7 @@
 
 Проверить, чтобы все работало без ошибок в консоли */
 
-const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '5');
+const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '2');
 
 const personalMovieDB = {
   count: numberOfFilms,
@@ -30,12 +30,12 @@ const personalMovieDB = {
   actors: {},
   genres: [],
   privat: false
-};  
+};
 
-const a = prompt('Один из последних просмотренных фильмов?', ''),
-      b = +prompt('На сколько оцените его?', ''),
-      c = prompt('Один из последних просмотренных фильмов?', ''),
-      d = +prompt('На сколько оцените его?', '');
+const a = prompt('Один из последних просмотренных фильмов?', 'Spider-man'),
+  b = +prompt('На сколько оцените его?', '5.2'),
+  c = prompt('Один из последних просмотренных фильмов?', 'Bat-man'),
+  d = +prompt('На сколько оцените его?', '8.7');
 personalMovieDB.movies[a] = b;
 personalMovieDB.movies[c] = d;
 
