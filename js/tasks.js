@@ -1,7 +1,9 @@
 'use strict';
 
-let number = 4;
+let category = 'toys';
 
-console.log(4 / 0);
+console.log(`https://someurl.com/${category}/5`); 
 
-console.log()
+const user = "Ivan";
+
+alert(`Hello, ${user}`);
