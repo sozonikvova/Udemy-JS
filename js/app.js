@@ -1,24 +1,18 @@
 'use strict';
 
-const arr = [1, 2, 3, 4, 5];
-const arrObj = {
-  0: 1,
-  1: 2,
-  2: 3,
-  3: 4,
-  4: 5
-}
+// alert('Hello, World!');
+
+// const result = confirm('Are you sure?');
+// console.log(result);
+
+// const answer = +prompt('Есть ли вам 18?', 'Да');
+// console.log(typeof(answer)); // string all information from user is string
 
 
+const answers = [];
 
-arrObj['b'] = 'Hello';
+// answers[0] = prompt('Как ваше имя?', '');
+// answers[1] = prompt('Как ваша фамилия?', '');
+// answers[2] = +prompt('Сколько вам лет?', '');
 
-
-console.log(arrObj.b)
-
-const obj = {
-  'Anna': 500,
-  'Alice': 200,
-};
-
-console.log(arrObj[2])
+console.log(typeof(null)); // object (answers);
