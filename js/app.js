@@ -1,16 +1,24 @@
 'use strict';
 
-console.log('Hello, World!' * 9); 
+const arr = [1, 2, 3, 4, 5];
+const arrObj = {
+  0: 1,
+  1: 2,
+  2: 3,
+  3: 4,
+  4: 5
+}
 
-let und;
-console.log(und);
+
+
+arrObj['b'] = 'Hello';
+
+
+console.log(arrObj.b)
 
 const obj = {
-  name: 'John',
-  age: 25,
-  7: 'test'
+  'Anna': 500,
+  'Alice': 200,
 };
 
-console.log(obj.name);
-console.log(obj[7]);
-
+console.log(arrObj[2])
