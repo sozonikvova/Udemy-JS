@@ -42,4 +42,20 @@ console.log(5 % 2);
 const isChecked = false,
   isClose = false;
 
-  console.log(!isChecked || !isClose);
+console.log(!isChecked || !isClose);
+
+
+
+personalMovieDB = {
+  count: 15,
+  movies: [],
+  actors: {},
+  genres: [],
+  privat: false
+};
+
+const b = 'Halk';
+const c = 2.5;
+
+
+console.log(personalMovieDB.movies.b = c);
