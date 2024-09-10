@@ -1,20 +1,7 @@
 'use strict';
-let number = 5;
-const leftBorderWith = 1;
-const obj = {
-  a: 50,
-}
 
-var name = 'Ivan';
+let number = 4;
 
-{
-  let result  = 50;
+console.log(4 / 0);
 
-}
-
-console.log(result);
-
-
-a = 50;
-
-console.log(a);
+console.log()
