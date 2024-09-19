@@ -1,68 +1,47 @@
 'use strict';
 
-// function getName(name) {
-//   return `Hello, ${name}!`;
-// }
+const options = {
+  name: 'test',
+  width: 1024,
+  height: 1024,
+  colors: {
+    border: 'black',
+    bg: 'red'
+  },
 
-// console.log(getName('Trio'));
+  makeTest: function () {
+    console.log("Test");
+  } // Method created
+};
+
+options.makeTest();
 
 
-// function getString(base, repeat) {
-//   let result = '';
-//   // if (typeof (times) !== 'number' || times <= 0) {
-//   //   return base;
-//   // }
-//   for (let i = 0; i < repeat * base; i += base) {
+const {border, bg} = options.colors; // деструктуризація даних 
 
-//     result += base + i;
-//     result += '---';
+console.log(border);
+
+console.log(Object.keys(options).length);
+// console.log(options.name)
+
+// delete options.name;
+
+// console.log(options);
+// let counter = 0;
+
+// for (let key in options) {
+//   if (typeof (options[key]) === 'object') {
+//     for (let i in options[key]) {
+//       console.log(`Option ${i} has option ${options[key][i]}`);
+//       counter++;
+//     }
+//   } else {
+//     console.log(`Option ${key} has option ${options[key]}`);
+//     counter++;
 //   }
-//   return result;
-
-// }
-// console.log(getString(7, 4));
-
-
-// let o = 5;
-
-// for (let i = 0; i < 15; i = i + 5) {
-//   console.log(i);
 // }
 
-// let userName = 'Іван';
-
-// function showMessage() {
-//   userName = 'Богдан'; // (1) змінено зовнішню змінну
-
-//   let message = 'Здоровенькі були, ' + userName;
-//   console.log(message);
-// }
-
-// console.log(userName);// Іван перед викликом функції showMessage
-
-// showMessage();
-
-// console.log(userName); // Богдан, значення було змінено після виклику функції showMessage
+// console.log(counter);
 
 
-// function showMessage(from, text) { // параметри: from, text
-//   console.log(from + ': ' + text);
-// }
 
-
-// showMessage('Вася', 'Привіт'); // 'Вася: Привіт'
-
-
-function showMessage(from, text) {
-
-  from = '*' + from + '*'; // прикрашаємо "from"
-
-  console.log(from + ': ' + text);
-}
-
-let from = "Анна";
-
-showMessage(from, "Привіт"); // *Анна*: Привіт
-
-// значення "from" те саме, функція змінила локальну копію
-alert(from); // Анна
