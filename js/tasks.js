@@ -1,111 +1,68 @@
-"use strict";
+'use strict';
 
-// for (let i = 0; i < 3; i++) {
+// function getName(name) {
+//   return `Hello, ${name}!`;
+// }
+
+// console.log(getName('Trio'));
+
+
+// function getString(base, repeat) {
+//   let result = '';
+//   // if (typeof (times) !== 'number' || times <= 0) {
+//   //   return base;
+//   // }
+//   for (let i = 0; i < repeat * base; i += base) {
+
+//     result += base + i;
+//     result += '---';
+//   }
+//   return result;
+
+// }
+// console.log(getString(7, 4));
+
+
+// let o = 5;
+
+// for (let i = 0; i < 15; i = i + 5) {
 //   console.log(i);
-//   for (let j = 0; j < 3; j++) {
-//     console.log(j);
-//   }
 // }
 
-/* = ====================================
+// let userName = 'Іван';
 
-let result = '';
+// function showMessage() {
+//   userName = 'Богдан'; // (1) змінено зовнішню змінну
 
-const length = 8;
-
-for (let i = 1; i <= length; i++) {
-
-  // Print spaces
-  for (let j = length; j > i; j--) {
-    result += ' ';
-  }
-
-  // Print asterisks
-  for (let k = 0; k < (2 * i - 1); k++) {
-    result += '*';
-  }
-
-  result += '\n';
-}
-
-console.log(result); = ==================================== */
-
-/*
-for (let i = 2; i <= 16; i++) {
-  if (i % 2 === 0) {
-    continue;
-  } else {
-    console.log(i);
-  }
-}
-
-
-let i = 2;
-
-do {
-  if (i % 2 !== 0) {
-    console.log(i);
-  }
-  i++;
-} while (i <= 16);
-
-
-let arr = [];
-
-for (let i = 5; i <= 10; i++) {
-  arr[i - 5] = i;
-}
-
-console.log(arr); */
-/*
-const result = [];
-
-const arr = [3, 5, 8, 16, 20, 23, 50];
-
-for (i = 0; i < arr.length; i++) {
-  result[i] = arr[i];
-}
-
-console.log(result);
-
-
-*/
-
-// const data = [5, 10, 'Shopping', 20, 'Homework'];
-
-// for (let i = 0; i < data.length; i++) {
-//   if (typeof (data[i]) == 'number') {
-//     data[i] = data[i] * 2;
-//   } else if (typeof (data[i]) == 'string') {
-//     data[i] = `${data[i]} -done`;
-//   }
+//   let message = 'Здоровенькі були, ' + userName;
+//   console.log(message);
 // }
 
-// console.log(data);
+// console.log(userName);// Іван перед викликом функції showMessage
+
+// showMessage();
+
+// console.log(userName); // Богдан, значення було змінено після виклику функції showMessage
 
 
-
-// const data = [5, 10, 'Shopping', 20, 'Homework'];
-
-// const result = [];
-
-// for (let i = 1; i <= data.length; i++) {
-//   result[i - 1] = data[data.length - i];
+// function showMessage(from, text) { // параметри: from, text
+//   console.log(from + ': ' + text);
 // }
-// console.log(result);
 
 
-const lines = 5;
-let result = '';
+// showMessage('Вася', 'Привіт'); // 'Вася: Привіт'
 
-for (let i = 0; i <= lines; i++) {
-  for (let j = 0; j < lines - i; j++) {
-    result += " ";
-  }
-  for (let j = 0; j < 2 * i + 1; j++) {
-    result += "*";
-  }
-  result += "\n";
+
+function showMessage(from, text) {
+
+  from = '*' + from + '*'; // прикрашаємо "from"
+
+  console.log(from + ': ' + text);
 }
 
-console.log(result)
+let from = "Анна";
+
+showMessage(from, "Привіт"); // *Анна*: Привіт
+
+// значення "from" те саме, функція змінила локальну копію
+alert(from); // Анна
