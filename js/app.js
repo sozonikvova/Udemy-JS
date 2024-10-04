@@ -1,6 +1,17 @@
 'use strict';
 
-const numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?', '4');
+let numberOfFilms;
+
+
+function start() {
+  numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '4');
+
+  while (numberOfFilms === '' || numberOfFilms === null || isNaN(numberOfFilms)) {
+    numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '4');
+  }
+}
+
+start();
 
 const personalMovieDB = {
   count: numberOfFilms,
@@ -34,3 +45,18 @@ if (personalMovieDB.count < 10) {
 console.log(personalMovieDB);
 
 
+function showMyDB() {
+  if (personalMovieDB.privat === false) {
+    console.log(personalMovieDB);
+  }
+}
+
+
+function writeYourGenres() {
+
+  for (let i = 1; i <= 3; i++) {
+    personalMovieDB.genres[i - 1] = prompt(`Ваш любимый жанр под номером ${i}`);
+  }
+}
+
+writeYourGenres();
